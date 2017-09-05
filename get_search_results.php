@@ -2,19 +2,29 @@
 include 'db.php';
 include 'header.php';
 include 'nav.php';
+include 'search.php';
+include 'notification.php';
 ?>
 <style>
     .card-image img{
         height: 320px !important;
     }
 </style>
-<div class="row">
+
+<?php
+$county = (!empty($_POST['county']) ? $_POST['county'] : '');
+$house_type = (!empty($_POST['house_type']) ? $_POST['house_type'] : '');
+$house_size = (!empty($_POST['house_size']) ? $_POST['house_size'] : '');
+$cost = (!empty($_POST['cost']) ? $_POST['cost'] : '');
+$house_for = (!empty($_POST['house_for']) ? $_POST['house_for'] : '');
+?>
+
+<div class="row" style="width: 96%; margin: auto;">
+    <div class="row col s12 white-text">
+        <p class="teal-text" style="font-size: 20px; font-weight: bold;">Houses for <?php echo $house_for; ?></p>
+        <div class="divider white z-depth-1" style="margin-top: -25px;"></div>
+    </div>
     <?php
-    $county = (!empty($_POST['county']) ? $_POST['county'] : '');
-    $house_type = (!empty($_POST['house_type']) ? $_POST['house_type'] : '');
-    $house_size = (!empty($_POST['house_size']) ? $_POST['house_size'] : '');
-    $cost = (!empty($_POST['cost']) ? $_POST['cost'] : '');
-    $house_for = (!empty($_POST['house_for']) ? $_POST['house_for'] : '');
     if ($house_for == "Sale") {
         if ($county == "" && $house_type == "" && $house_size == "" && $cost == "") {
             $result = SmarthouseDB::getInstance()->get_houses_for_sale1($house_for);
@@ -23,8 +33,8 @@ include 'nav.php';
             while ($row = mysqli_fetch_array($result)) {
                 ?>
 
-    <div class="col s12 m4" style="margin-top: 5px;">
-                    <div class="card" style="height: 510px !important;">
+                <div class="col s12 m4" style="margin-top: 5px;">
+                    <div class="card">
                         <div class="card-image">
                             <img src="images/uploads/<?php echo $row["image_path"]; ?>">
                             <span class="card-title"><?php echo $row["title"]; ?></span>

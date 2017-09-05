@@ -1,6 +1,6 @@
 <link href="css/searchsale.css" rel="stylesheet" type="text/css"/>
 <div class="row col s12">
-    <form action="get_search_results.php" method="post" enctype="multipart/form-data">
+    <form action="results.php" method="post" enctype="multipart/form-data">
         <div class="col s12 m4" style="margin-left: -50px;">
             <select name="county" class="browser-default blue-grey-text minimal" >
                 <option value="" disabled selected>Select County</option>

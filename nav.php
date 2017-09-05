@@ -1,7 +1,7 @@
   <div class="navbar-fixed">
 <nav class=" green darken-4" role="navigation">
             <div class="nav-wrapper container" style="width: 100% !important;">
-                <a id="logo-container" href="#" class="brand-logo"><img src="images/smarthao_logo.png" style="width: 400px;"></a>
+                <a id="logo-container" href="index.php" class="brand-logo"><img src="images/smarthao_logo.png" style="width: 400px;"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown2" data-beloworigin="true" style="color: yellow; font-weight: bold;">Services<i class="material-icons right" style="margin-right: 10px;">arrow_drop_down</i></a></li>
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown" data-beloworigin="true" style="color: yellow; font-weight: bold;">Advertise Property<i class="material-icons right">arrow_drop_down</i></a></li>
