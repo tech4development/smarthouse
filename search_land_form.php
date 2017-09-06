@@ -55,16 +55,14 @@
 
         </div>
         <div class="col s12 m3">
-            <select class="browser-default blue-grey-text minimal">
+            <select name="land_for" class="browser-default blue-grey-text minimal">
                 <option value="" disabled selected>Select Land For</option>
-
                 <option value="Sale">Sale</option>
                 <option value="Lease">Lease</option>
-
             </select>
         </div>
         <div class="col s12 m3">
-            <select class="browser-default blue-grey-text minimal">
+            <select name="cost" class="browser-default blue-grey-text minimal">
                 <option value="" disabled selected>Select Cost</option>
                 <option value="100,000-200,000">100,000-200,000</option>
                 <option value="200,000 - 500,000">200,000 - 500,000</option>

@@ -212,11 +212,11 @@ $search = (!empty($_POST['search']) ? $_POST['search'] : '');
                 ?>
 
                 <div class="col s12 m3" style="margin-top: 5px;">
-                    <div class="card" style="min-height: 450px;">
+                    <div class="card" >
                         <div class="card-image">
                             <img src="images/uploads/<?php echo $row["image_path"]; ?>">
                         </div>
-                        <div class="card-content">
+                        <div class="card-content" style="min-height: 250px;">
                             <p class="orange-text"><?php echo substr($row["title"], 0, 95); ?> </p>
                             <p><?php echo $row["type_of_house"]; ?></p>
                             <p><?php echo $row["category"]; ?></p>
