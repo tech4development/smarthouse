@@ -7,6 +7,7 @@ include 'notification.php';
 include 'saleslider.php';
 include 'landslider.php';
 include 'rentslider.php';
+include 'services.php';
 include 'whoweare.php';
 include 'footer.php';
 include 'scripts.php';
