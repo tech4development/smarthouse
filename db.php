@@ -51,10 +51,9 @@ class SmarthouseDB extends mysqli {
         return $result;
     }
   
-    public function get_land($land) {
-        $stmt = $this->con->prepare("SELECT * FROM properties WHERE land_for=? AND display_status=1 ORDER BY RAND()");
-        $stmt->bind_param("s", $land);
-        $stmt->execute();
+    public function get_land() {
+        $stmt = $this->con->prepare("SELECT * FROM properties WHERE land_for !='' AND display_status=1 ORDER BY RAND()");
+              $stmt->execute();
         $result = $stmt->get_result();
         return $result;
     }

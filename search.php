@@ -1,5 +1,5 @@
 <div id="index-banner" class="parallax-container hide-on-med-and-down" style="">
-    <div class="section no-pad-bot target-active" style="width: 84%; margin: auto;">
+    <div class="section no-pad-bot" style="width: 84%; margin: auto;">
         <button class="tablink" onclick="openCity('London', this, 'rgb(245, 127, 23)')" id="defaultOpen">House For Sale</button>
         <button class="tablink" onclick="openCity('Paris', this, 'rgb(245, 127, 23)')">House For Rent</button>
         <button class="tablink" onclick="openCity('Tokyo', this, 'rgb(245, 127, 23)')">Land</button>

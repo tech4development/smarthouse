@@ -2,7 +2,11 @@
 include 'db.php';
 include 'header.php';
 include 'nav.php';
-include 'search.php';
+if($_POST["house_for"] == "Sale"){
+    include 'search.php';
+}elseif ($_POST["house_for"] == "Rent") {
+      include 'search2.php';
+}
 include 'notification.php';
 ?>
 <style>
@@ -208,7 +212,7 @@ $search = (!empty($_POST['search']) ? $_POST['search'] : '');
                 ?>
 
                 <div class="col s12 m3" style="margin-top: 5px;">
-                    <div class="card" style="min-height: 535px;">
+                    <div class="card" style="min-height: 450px;">
                         <div class="card-image">
                             <img src="images/uploads/<?php echo $row["image_path"]; ?>">
                         </div>
@@ -218,10 +222,9 @@ $search = (!empty($_POST['search']) ? $_POST['search'] : '');
                             <p><?php echo $row["category"]; ?></p>
                             <p><?php echo $row["neighbourhood"]; ?></p>
                             <p>KSh. <?php echo $row["actual_cost"]; ?></p>
-                        </div>
-                        <div class="card-action">
                             <a href="#"> Details</a>
                         </div>
+                       
                     </div>
                 </div>              
                 <?php

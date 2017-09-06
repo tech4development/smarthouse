@@ -54,9 +54,6 @@
         $('.slider').slider('prev');
     });
 
-        $(function () {
-            $(".target-active").find("[<?php echo $tab;?>]").parent().addId("defaultOpen");
-        });
 
 </script>
 </body>

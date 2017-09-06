@@ -5,10 +5,11 @@
 <div class="slider" style="margin-top: 20px; width: 98%; margin: auto;z-index: -1;">
     <ul class="slides  center-align" style="background-color: rgba(234, 233, 233, 0.42);">
         <?php
-        $land = "Sale";
-        $result = SmarthouseDB::getInstance()->get_land($land);
+
+        $result = SmarthouseDB::getInstance()->get_land();
         $num_rows = mysqli_num_rows($result);
-        $sliders = $num_rows%4;
+        $sliders = floor($num_rows / 4);
+     
      for ($i = 0; $i < $sliders; $i++) {
          
                 ?>
@@ -24,14 +25,14 @@
                             <img src="images/uploads/<?php echo $row["image_path"]; ?>" class="responsive-img" style="height: 300px;" style="margin-left: 10px;"/>
                             <div class=" col s12 white left-align" style="margin-top: -8px;border: 1px solid #ddd; ">
                                 <div class="col s12">
-                                    <p class="orange-text"> <?php echo substr($row["title"], 0, 30); ?></p> 
+                                    <p class="deep-orange-text text-darken-4"> <?php echo substr($row["title"], 0, 30); ?></p> 
                                 </div>
                                
                                 <div class="col s6">
-                                    <p class="blue-text" style="margin-top: -15px;"> Ksh. <?php echo $row["actual_cost"]; ?></p>
+                                    <p class="cyan-text" style="margin-top: -15px;"> Ksh. <?php echo $row["actual_cost"]; ?></p>
                                 </div>
                                 <div class="col s6">
-                                    <a class=" orange darken-4 white-text" href="index.php" style="float: right;  border-radius: 2px;"> Details  <i class="material-icons" style="vertical-align: bottom;">send</i> </a>
+                                    <a class=" deep-orange-text text-darken-4" href="index.php" style="float: right;  border-radius: 2px;"> Details <span style="font-weight: bold; font-size: 150%;">»</span> </a>
                                 </div>
                             </div>
                         </div>
